@@ -1,1 +1,57 @@
-$primarycolor: blue;
+/* ===========================
+   VARIABLES Y MIXINS GLOBALES
+   =========================== */
+
+/* 🎨 Paleta */
+$color-bg: #0f1115; // fondo del body
+$color-page: #ffffff; // panel central
+$color-primary: #1f6feb; // links/acentos
+$color-accent: #ff7a59; // perfil profesional (tarjeta)
+$color-text: #1c1e21; // texto principal
+$color-muted: #6b7280; // bordes, texto secundario
+$color-soft: #f5f7fb; // secciones suaves
+
+/* ✍ Tipografía */
+$font-base: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+/* 📏 Tamaños */
+$fs-100: .875rem; // 14px
+$fs-200: 1rem; // 16px
+$fs-300: 1.125rem; // 18px
+$fs-400: 1.5rem; // 24px
+
+/* 📐 Espaciados */
+$sp-1: .5rem;
+$sp-2: 1rem;
+$sp-3: 1.5rem;
+$sp-4: 2rem;
+
+/* 🪟 UI */
+$radius: 14px;
+$shadow: 0 10px 30px rgba(2, 6, 23, .08);
+
+/* 📱 Breakpoints */
+$bp-sm: 480px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+
+/* 🔄 Media queries legibles */
+@mixin respond-to($bp) {
+    @if $bp ==sm {
+        @media (min-width: $bp-sm) {
+            @content;
+        }
+    }
+
+    @else if $bp ==md {
+        @media (min-width: $bp-md) {
+            @content;
+        }
+    }
+
+    @else if $bp ==lg {
+        @media (min-width: $bp-lg) {
+            @content;
+        }
+    }
+}

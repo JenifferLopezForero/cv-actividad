@@ -1,9 +1,80 @@
-@use 'variables';
+@use 'variables' as *;
 
-.personal-info{
-    h1{
-        color: variables.$primary-color;
-        font-size: 30px;
+/* ===========================
+   BLOQUE 1: Información Personal
+   =========================== */
+.personal-info {
+    background: $color-soft;
+    padding: $sp-3;
+    border-radius: $radius;
+    margin-bottom: $sp-4;
+    text-align: center;
+
+    h2 {
+        margin-bottom: $sp-2;
     }
 
+    &__media {
+        display: inline-block;
+        margin-bottom: $sp-2;
+
+        .profile-pic {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid $color-page;
+            box-shadow: $shadow;
+            display: block;
+            margin-inline: auto;
+        }
+
+        figcaption {
+            margin-top: $sp-1;
+            font-weight: 700;
+            font-size: $fs-300;
+        }
     }
+
+    &__contacto {
+        font-style: normal;
+        margin-top: $sp-1;
+
+        p {
+            margin: 0 0 $sp-1 0;
+        }
+
+        a {
+            color: $color-primary;
+            text-decoration: none;
+            font-weight: 600;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__redes {
+        list-style: none;
+        padding: 0;
+        margin: $sp-2 0 0 0;
+        display: flex;
+        justify-content: center;
+        gap: $sp-2;
+        flex-wrap: wrap;
+
+        li a {
+            display: inline-block;
+            padding: .45rem .9rem;
+            border: 1px solid $color-muted;
+            border-radius: 999px;
+            transition: transform .15s ease, background .15s ease;
+
+            &:hover {
+                background: $color-page;
+                transform: translateY(-2px);
+            }
+        }
+    }
+}

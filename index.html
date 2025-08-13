@@ -1,72 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CV – Jeniffer Lopez</title>
+  <title>CV – Jeniffer Smith López Forero</title>
+
+  <!-- Tipografía profesional -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS compilado desde SASS -->
   <link rel="stylesheet" href="css/styles.css">
+  <meta name="description"
+    content="Hoja de vida de Jeniffer Smith López Forero: perfil profesional, habilidades y contacto.">
 </head>
+
 <body>
   <header>
-    <h1 class="visually-hidden">Hoja de vida de Jeniffer Lopez</h1>
+    <!-- Título oculto para accesibilidad -->
+    <h1 class="visually-hidden">Hoja de vida de Jeniffer Smith López Forero</h1>
   </header>
 
   <main class="main-container">
-    <!-- Bloque 1: Información Personal -->
+    <!-- ===== Bloque 1: Información Personal ===== -->
     <section class="personal-info" aria-labelledby="titulo-info">
       <h2 id="titulo-info">Información Personal</h2>
-      <figure>
-        <img src="my_profile.jpg" alt="Foto de perfil de Jeniffer Lopez" class="profile-pic" width="240" height="240">
-        <figcaption>Jeniffer Lopez</figcaption>
+
+      <figure class="personal-info__media">
+        <img src="my_profile.jpg" alt="Foto de perfil de Jeniffer Smith López Forero" class="profile-pic" width="240"
+          height="240">
+        <figcaption>Jeniffer Smith López Forero</figcaption>
       </figure>
-      <address>
+
+      <address class="personal-info__contacto">
+        <p><strong>Ubicación:</strong> Bogotá, Colombia</p>
+        <p><strong>Teléfono:</strong> <a href="tel:+573103682377">+57 310 368 2377</a></p>
         <p><strong>Email:</strong> <a href="mailto:forerojeni@gmail.com">forerojeni@gmail.com</a></p>
-        <ul>
-          <li><a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-          <li><a href="#" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <ul class="personal-info__redes">
+          <li><a href="http://www.linkedin.com/in/jeniffer-smith-lópez-forero-4ba868355" target="_blank"
+              rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a></li>
         </ul>
       </address>
     </section>
+    <!-- ===== Fin Bloque 1 ===== -->
 
-    <!-- Bloque 2: Perfil Profesional -->
+    <!-- ===== Bloque 2: Perfil Profesional ===== -->
     <section class="teaser" aria-labelledby="titulo-perfil">
       <h2 id="titulo-perfil">Perfil Profesional</h2>
-      <article class="teaser__card">
+      <article class="teaser__card" role="article">
         <p>
-          Estudiante de Ingeniería de Software enfocada en desarrollo web y buenas prácticas.
-          Apasionada por la accesibilidad y el diseño limpio.
+          Estudiante de Ingeniería de Software (9.º semestre) con enfoque en desarrollo front‑end y back‑end,
+          aplicaciones móviles y videojuegos. Me caracteriza el aprendizaje rápido, la adaptabilidad, el trabajo en
+          equipo,
+          la resolución de problemas y la autonomía. Manejo Git, GitHub, Sourcetree, Jira/Azure y metodologías ágiles
+          (Scrum).
         </p>
       </article>
     </section>
+    <!-- ===== Fin Bloque 2 ===== -->
 
-    <!-- Bloque 3: Skills -->
+    <!-- ===== Bloque 3: Skills ===== -->
     <section class="skill" aria-labelledby="titulo-skills">
       <h2 id="titulo-skills">Skills</h2>
-      <div class="skill__grid">
-        <article>
-          <h3>Skills Técnicos</h3>
+
+      <div class="skill__grid" role="list">
+        <article class="skill__group" aria-labelledby="skills-tecnicos">
+          <h3 id="skills-tecnicos">Skills Técnicos</h3>
           <ul>
-            <li>HTML5</li>
-            <li>CSS / SASS</li>
-            <li>JavaScript</li>
-            <li>Git y GitHub</li>
+            <li>HTML5, CSS3 (SASS) y JavaScript</li>
+            <li>Java, Dart, Python</li>
+            <li>React, Flutter</li>
+            <li>Unity (2D y 3D)</li>
+            <li>Git, GitHub, Sourcetree</li>
+            <li>QA con Jira y Azure</li>
           </ul>
         </article>
-        <article>
-          <h3>Skills Blandos</h3>
+
+        <article class="skill__group" aria-labelledby="skills-blandos">
+          <h3 id="skills-blandos">Skills Blandos</h3>
           <ul>
-            <li>Comunicación</li>
             <li>Trabajo en equipo</li>
-            <li>Gestión del tiempo</li>
             <li>Adaptabilidad</li>
+            <li>Comunicación</li>
+            <li>Resolución de problemas</li>
+            <li>Autonomía</li>
+            <li>Aprendizaje continuo</li>
           </ul>
         </article>
       </div>
     </section>
+    <!-- ===== Fin Bloque 3 ===== -->
   </main>
 
   <footer>
-    <small>&copy; 2025 Jeniffer Lopez</small>
+    <small>&copy; 2025 Jeniffer Smith López Forero</small>
   </footer>
 </body>
+
 </html>

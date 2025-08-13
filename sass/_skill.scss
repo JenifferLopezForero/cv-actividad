@@ -1,0 +1,46 @@
+@use 'variables' as *;
+
+/* ===========================
+   BLOQUE 3: Skills (2 columnas)
+   =========================== */
+.skill {
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: $sp-3;
+
+        @include respond-to(md) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &__group {
+        background: $color-page;
+        border: 1px solid $color-muted;
+        border-radius: $radius;
+        padding: $sp-2 $sp-3;
+        box-shadow: $shadow;
+    }
+
+    h3 {
+        margin-bottom: $sp-2;
+        padding-bottom: .5rem;
+        border-bottom: 2px solid $color-muted;
+        font-weight: 700;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            padding: .5rem 0;
+            border-bottom: 1px dashed rgba($color-muted, .55);
+
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+    }
+}

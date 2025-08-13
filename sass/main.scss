@@ -1,14 +1,70 @@
-/* usa los parciales que ya tienes en la raíz de /sass */
-@use 'variables' as *;   // <- toma las variables sin namespace
+/* ===========================
+   ARCHIVO RAÍZ → compila a css/styles.css
+   =========================== */
+
+/* 1) Importaciones (deben ir primero) */
+@use 'variables' as *;
 @use 'personal';
 @use 'teaser';
 @use 'skill';
 
-/* utilidades opcionales */
+/* 2) Reset y base del documento */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: $font-base;
+  font-size: $fs-200;
+  color: $color-text;
+  background: $color-bg;
+  line-height: 1.6;
+}
+
+/* 3) Contenedor principal */
+.main-container {
+  max-width: 980px;
+  margin-inline: auto;
+  padding: $sp-4 $sp-2;
+  background: $color-page;
+  border-radius: $radius;
+  box-shadow: $shadow;
+
+  @include respond-to(md) {
+    padding: $sp-4;
+  }
+}
+
+/* 4) Titulares y utilidades */
+h1,
+h2,
+h3 {
+  margin: 0 0 $sp-2 0;
+}
+
+h2 {
+  font-size: $fs-400;
+}
+
+h3 {
+  font-size: $fs-300;
+}
+
 .visually-hidden {
-  position: absolute;
-  width: 1px; height: 1px;
-  padding: 0; margin: -1px;
-  overflow: hidden; clip: rect(0 0 0 0);
-  white-space: nowrap; border: 0;
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }
